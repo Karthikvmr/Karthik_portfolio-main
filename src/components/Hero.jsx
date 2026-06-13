@@ -59,16 +59,16 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 
             data-aos="fade-up"
-            className="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+            className="text-black text-3xl md:text-5xl font-bold mb-4 tracking-tight"
           >
-            Hi, I’m a <br /> <span className="text-transparent [-webkit-text-stroke:1.5px_black]">React Developer</span>
+            Hi, I’m a <br /> <span className="text-transparent [-webkit-text-stroke:2px_white]">React Developer</span>
           </h1>
 
           {/* Subheading */}
           <p 
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-white text-sm md:text-lg font-semibold mb-8 max-w-md drop-shadow-md"
+            className="text-black text-sm md:text-lg font-semibold mb-8 max-w-md drop-shadow-md"
           >
             I build fast, scalable and modern web applications using React, Node.js and Tailwind CSS.
           </p>
