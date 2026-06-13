@@ -35,7 +35,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-[100svh] min-h-[620px] md:h-screen md:min-h-0 overflow-hidden bg-black">
       {/* Background Video */}
       <video
         ref={videoRef}
@@ -52,7 +52,7 @@ const Hero = () => {
       </video>
 
       {/* Content Container */}
-      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end text-left w-full">
+      <div className="absolute inset-0 z-20 px-6 pb-28 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end text-left w-full">
         
         {/* Left Side: Text and Buttons */}
         <div className="flex flex-col items-start text-left max-w-2xl w-full">
@@ -92,10 +92,8 @@ const Hero = () => {
         </div>
 
         {/* Right Side: Play Video Button */}
-        <div 
-          data-aos="zoom-in"
-          data-aos-delay="600"
-          className="mt-8 md:mt-0 flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group self-start md:self-auto"
+        <div
+          className="mt-6 md:mt-0 flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group self-start md:self-auto"
           onClick={toggleVideo}
         >
           <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-md flex justify-center items-center group-hover:scale-110 group-hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,42,42,0.6)]">
