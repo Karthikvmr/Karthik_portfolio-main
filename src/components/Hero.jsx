@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Adjusted import path for the video
 import heroVideo from '../assets/hero video/Developer_introduces_self_and_sk…_202606051918.mp4';
+import heroPoster from '../assets/hero video/hero-poster.png';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -14,27 +15,20 @@ const Hero = () => {
       once: true,
       easing: 'ease-out'
     });
-
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.play()
-      .then(() => setIsPlaying(true))
-      .catch(() => setIsPlaying(false));
   }, []);
 
   const toggleVideo = (e) => {
     e.stopPropagation();
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play()
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.muted = false;
+        video.volume = 1;
+        video.play()
           .then(() => setIsPlaying(true))
           .catch(() => setIsPlaying(false));
       } else {
-        videoRef.current.pause();
+        video.pause();
         setIsPlaying(false);
       }
     }
@@ -45,11 +39,10 @@ const Hero = () => {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay
         loop
-        muted
         playsInline
-        preload="auto"
+        preload="metadata"
+        poster={heroPoster}
         onPlaying={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
