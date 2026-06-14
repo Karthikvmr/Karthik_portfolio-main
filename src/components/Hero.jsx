@@ -61,7 +61,7 @@ const Hero = () => {
             data-aos="fade-up"
             className="text-black text-3xl md:text-5xl font-bold mb-4 tracking-tight"
           >
-            Hi, I’m a <br /> <span className="text-transparent [-webkit-text-stroke:2px_white]">React Developer</span>
+            Hi, I’m a <br /> <span className="text-White text-3xl md:text-5xl font-bold mb-4 tracking-tight">React Developer</span>
           </h1>
 
           {/* Subheading */}
